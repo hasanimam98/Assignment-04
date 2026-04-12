@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind+Daisy -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Job Tracker</title>
+  </head>
+  <body class="max-w-6xl mx-auto bg-[#F8FAFC]">
+    <!-- First part -->
+    <section class="Tracker-Head space-y-5 pt-12">
+      <h1 class="font-bold text-2xl">Job Application Tracker</h1>
+      <div class="Tracker-Info grid grid-cols-3 gap-3">
+        <div class="TOTAL p-1 rounded-sm bg-white">
+          <p>Total</p>
+          <p id="total-card">0</p>
+        </div>
+        <div class="INTERVIEW p-1 rounded-sm bg-white">
+          <p>Interview</p>
+          <p>0</p>
+        </div>
+        <div class="REJECTED p-1 rounded-sm bg-white">
+          <p>Rejected</p>
+          <p>0</p>
+        </div>
+      </div>
+    </section>
+    <!-- 2nd part -->
+    <section>
+      <div class="flex justify-between">
+        <h3 class="pt-4">Available Jobs</h3>
+
+        <p id="total-card2">0</p>
+      </div>
+
+      <div role="tablist" class="tabs tabs-lifted">
+        <input
+          type="radio"
+          name="my_tabs"
+          role="tab"
+          class="tab"
+          aria-label="All"
+          checked
+        />
+        <div role="tabpanel" class="tab-content border-base-300 bg-base-100">
+          <!-- card1 -->
+          <div
+            class="card-body card grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button
+                  id="Rejected"
+                  class="btn btn-outline btn-secondary w-35 rejected"
+                >
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt dllt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card2 -->
+
+          <div
+            class="card-body card grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Card3 -->
+
+          <div
+            class="card-body grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Card4 -->
+          <div
+            class="card-body grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card5 -->
+          <div
+            class="card-body grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card6 -->
+          <div
+            class="card-body grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- card7 -->
+          <div
+            class="card-body grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card8 -->
+          <div
+            class="card-body grid grid-cols-[repeat(1,25fr)_1fr] justify-between"
+          >
+            <div class="space-y-2">
+              <h2 class="card-title">Mobile First Corp</h2>
+              <p class="font-light">React Native Developer</p>
+              <p class="font-light">Remote • Full-time • $130,000 - $175,000</p>
+
+              <button class="btn btn-active w-35 Not-Applied">
+                NOT APPLIED
+              </button>
+
+              <p class="font-light">
+                Build cross-platform mobile applications using React Native.
+                Work on products used by millions of users worldwide.
+              </p>
+
+              <div class="flex gap-4">
+                <button class="btn btn-outline btn-success w-35 Interview">
+                  INTERVIEW
+                </button>
+                <button class="btn btn-outline btn-secondary w-35 rejected">
+                  REJECTED
+                </button>
+              </div>
+            </div>
+
+            <div class="w-6 h-6 dlt">
+              <button class="rounded-full">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <input
+          type="radio"
+          name="my_tabs"
+          role="tab"
+          class="tab"
+          aria-label="INTERVIEW"
+        />
+        <div
+          role="tabpanel"
+          class="tab-content p-4 border-base-300 bg-base-100 Applied2"
+        ></div>
+
+        <input
+          type="radio"
+          name="my_tabs"
+          role="tab"
+          class="tab"
+          aria-label="REJECTED"
+        />
+        <div
+          role="tabpanel"
+          class="tab-content p-4 border-base-300 bg-base-100 Rejected2"
+        ></div>
+      </div>
+    </section>
+
+    <script src="./tailwind.config.js"></script>
+    <script src="./TotalJob.js"></script>
+  </body>
+</html>
