@@ -116,4 +116,15 @@ document.addEventListener('click', function(e){
   }
 
   // DELETE
+  if(e.target.closest('.dlt')){
+    const card = e.target.closest('.card-body');
+    const id = card.dataset.id;
+
+    document.querySelectorAll(`[data-id="${id}"]`).forEach(el => {
+      el.remove();
+    });
+    updateCount();
+  }
   
+
+});
