@@ -1,10 +1,37 @@
 
-function updateCount(){
-  const total = document.querySelectorAll("#mainJobs .card-body").length;
+// function updateCount(){
+//   const total = document.querySelectorAll("#mainJobs .card-body").length;
 
-  document.getElementById("total-card").innerText = total;
-  document.getElementById("total-card2").innerText = total;
+//   document.getElementById("total-card").innerText = total;
+//   document.getElementById("total-card2").innerText = total;
+// }
+function updateCount() {
+  const all = document.querySelectorAll("#mainJobs .card-body").length;
+  const interview = document.querySelectorAll(".Applied2 .card-body").length;
+  const rejected = document.querySelectorAll(".Rejected2 .card-body").length;
+
+  document.getElementById("total-card").innerText = all;
+  document.getElementById("interview-count").innerText = interview;
+  document.getElementById("rejected-count").innerText = rejected;
+  
+
+  const activeTab = document.querySelector('input[name="my_tabs"]:checked').getAttribute("aria-label");
+
+  let available = 0;
+
+  if(activeTab === "All"){
+    available = all;
+  }
+  else if(activeTab === "INTERVIEW"){
+    available = interview;
+  }
+  else if(activeTab === "REJECTED"){
+    available = rejected;
+  }
+
+  document.getElementById("total-card2").innerText = available;
 }
+
 
 
 
@@ -29,6 +56,7 @@ document.addEventListener('click', function(e){
     
 
     Tab2.appendChild(cardClone);
+    updateCount();
    
     
   }
@@ -52,7 +80,7 @@ document.addEventListener('click', function(e){
     Tab3.appendChild(cardClone2);
     // Tab3.appendChild(card);
     
-    
+    updateCount();
   }
 
   // DELETE
@@ -73,6 +101,9 @@ if(e.target.closest('.dlt')){
   
 
  });
+ document.querySelectorAll('input[name="my_tabs"]').forEach(tab => {
+  tab.addEventListener('change', updateCount);
+});
  updateCount();
 
 
