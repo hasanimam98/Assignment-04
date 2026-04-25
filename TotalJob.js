@@ -1,10 +1,4 @@
 
-// function updateCount(){
-//   const total = document.querySelectorAll("#mainJobs .card-body").length;
-
-//   document.getElementById("total-card").innerText = total;
-//   document.getElementById("total-card2").innerText = total;
-// }
 function updateCount() {
   const all = document.querySelectorAll("#mainJobs .card-body").length;
   const interview = document.querySelectorAll(".Applied2 .card-body").length;
@@ -31,10 +25,6 @@ function updateCount() {
 
   document.getElementById("total-card2").innerText = available;
 }
-
-
-
-
 
 
 document.addEventListener('click', function(e){
@@ -97,10 +87,8 @@ if(e.target.closest('.dlt')){
     
  }
 
-
-  
-
  });
+ 
  document.querySelectorAll('input[name="my_tabs"]').forEach(tab => {
   tab.addEventListener('change', updateCount);
 });
