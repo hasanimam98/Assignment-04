@@ -68,7 +68,7 @@ document.addEventListener('click', function(e){
     cardClone2.dataset.id = card.dataset.id;
 
     Tab3.appendChild(cardClone2);
-    // Tab3.appendChild(card);
+    
     
     updateCount();
   }
@@ -88,7 +88,7 @@ if(e.target.closest('.dlt')){
  }
 
  });
- 
+
  document.querySelectorAll('input[name="my_tabs"]').forEach(tab => {
   tab.addEventListener('change', updateCount);
 });
